@@ -1,0 +1,5 @@
+<option selected>
+    -------------------------------------------------------------</option>
+{% for Venue in Venues %}
+<option value="{{Venue.pk}}">{{Venue.name}}</option>
+{% endfor %}

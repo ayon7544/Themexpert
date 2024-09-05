@@ -1,0 +1,41 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}Ministry{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/MinistryPage/MinistryPage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="main">
+    {% if UserID is President %}
+    <div class="ministrysetup">
+        <form action="" method="post">
+            {% csrf_token %}
+            <button type="submit" name="save" value="setup" class="ministrysetuppage">Choose Minister<i
+                    class="fa-solid fa-hand-pointer fa-2xl"></i></button>
+        </form>
+    </div>
+    {% endif %}
+    <div class="profile">
+        {% for minister in MinisterList %}
+        <div class="user">
+            <div class="show-details">
+                <span>Ministry Name : {{ minister.MinistryName }}</span>
+                <span>Minister Name : {{ minister.MinisterID }}</span>
+                <span>Minister Constituency : {{ minister.MinisterConstituency }}</span>
+            </div>
+            {% for minister_details in MinisterDetails %}
+            {% if minister.MinisterNumberID  == minister_details.UserID %}
+            <div class="main-images">
+                <img id="white" class="white active" src="{{minister_details.UserImageFilename.url}}" alt="image">
+            </div>
+            <div class="show-details">
+                <span>Minister Contact No : {{minister_details.UserMobileNum}}</span>
+                <span>Minister Email : {{minister_details.UserEmail}}</span>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

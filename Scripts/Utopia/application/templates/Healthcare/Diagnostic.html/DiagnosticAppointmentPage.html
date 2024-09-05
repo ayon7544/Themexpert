@@ -1,0 +1,42 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}HEALTHCARE{% endblock %}
+{% block more-style %}
+    <link rel="stylesheet" href="static/CSS/Healthcare/Appoint.css">
+{% endblock %}
+{% block content %} 
+<div class="body">
+      <section class="appointment-form">
+        <h2>Book An Appointment</h2>
+        <form action="book_diagappointment" method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="facility">Select Facility:</label>
+            <select id="facility" name="facility">
+                <option value="Laboratory Test">Laboratory Test</option>
+                <option value="Radiology Service">Radiology Service</option>
+                <option value="Pathology Service">Pathology Service</option>
+                <option value="Electrocardiography (ECG)">Electrocardiography (ECG)</option>
+                <option value="Cardiac Test">Cardiac Test</option>
+                <option value="Cancer Screening">Cancer Screening</option>
+                <option value="Pediatric Screening">Pediatric Screening</option>
+                <option value="Pathology Service">Pathology Service</option>
+                <option value="Therapeutic Service">Therapeutic Service</option>
+            </select><br>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+      </section>
+</div>
+{% endblock %}

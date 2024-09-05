@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:ital,wght@1,900&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #eee;
+    overflow: scroll;
+}
+
+nav {
+    width: 100%;
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(7, 70, 70, 0.15);
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* .logo {
+    font-size: 15px;
+    font-weight: 600;
+    color: #778ba5;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+} */
+
+.menu {
+    display: flex;
+    margin: auto 20px;
+    list-style-type: none;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu li a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #778ba5;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+.menu li:hover a {
+    color: #fff;
+    background-color: #1e90ff;
+    transition: 0.5s ease-in-out;
+}
+
+.menu li:hover .out{
+    color: #fff;
+    background-color: red;
+    transition: 0.5s ease-in-out;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bar {
+    position: relative;
+    display: none;
+}
+
+.bar span {
+    color: #1e90ff;
+    background: #eee;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+
+}
+
+@media screen and (max-width:1100px) {
+    nav {
+        display: block;
+        padding: 0;
+    }
+
+    .logo {
+        display: inline-block;
+        margin: 20px 50px;
+    }
+
+    .menu {
+        display: block;
+        width: 100%;
+    }
+
+    .menu li {
+        position: relative;
+        margin: 40px 0;
+        display: none;
+    }
+
+    .menu li a {
+        width: 90%;
+        text-align: center;
+        padding: 30px;
+        font-size: 28px;
+        display: block;
+        border-radius: 30px;
+        left: 50%;
+        transform: translate(-50%);
+        position: relative;
+    }
+
+    .bar {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 80px;
+        cursor: pointer;
+    }
+
+    .bar #times {
+        color: #fe28a2;
+        display: none;
+    }
+
+    #check:checked~nav .menu li {
+        display: block;
+    }
+
+    #check:checked~nav .bar #times {
+        display: block;
+    }
+
+    #check:checked~nav .bar #bars {
+        display: none;
+    }
+}
+
+footer {
+    width: 100%;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px rgba(7, 70, 70, 0.15), 7px 7px 17px #fff;
+    z-index: 999;
+
+}
+
+footer #social a {
+    font-size: 15px;
+    margin: 20px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    justify-content: center;
+    color: #778ba5;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+footer #social #insta:hover {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+footer #social #fb:hover {
+    background-color: #3B5998;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+footer #social #utube:hover {
+    background-color: #FF0000;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+footer #social #X:hover {
+    background-color: #1DA1F2;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+footer #social a::after {
+    content: attr(class);
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    width: 120px;
+    height: 30px;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+  }
+
+
+  
+  footer #social a:hover::after {
+    visibility: visible;
+    display: inline-block;
+    opacity: 1;
+    transform: translate3d(-50%, -150%, 0);
+  }
+  

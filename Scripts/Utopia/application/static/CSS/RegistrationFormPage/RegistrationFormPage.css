@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:ital,wght@1,900&family=Ubuntu&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	background: #eee;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+.container {
+	display: flex;
+	width: fit-content;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border-radius: 10px;
+	border: 1px solid #f7f7f7;
+	margin: 50px;
+	box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 30px;
+}
+
+.input-box {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.input-box:nth-child(2nd) {
+	justify-content: end;
+}
+
+
+.input-box label,
+.gender-title {
+	color: #2f4f4f;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+.gender-title {
+	font-size: 16px;
+}
+
+.input-box input {
+	height: 40px;
+	width: 95%;
+	padding: 0 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+.input-box input:is(:focus, :valid) {
+	box-shadow: 0 3px 6px rgba(0, 0, 0.2);
+}
+
+
+.gender-category {
+	color: gray;
+}
+
+
+.gender-category label {
+	padding: 0 20px 0 5px;
+	font-size: 14px;
+
+}
+
+.gender-category label,
+.gender-category input {
+	cursor: pointer;
+}
+
+
+.alert p {
+	font-size: 14px;
+	font-style: italic;
+	color: dimgray;
+	margin: 5px 0;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.alert a:hover {
+	text-decoration: underline;
+}
+
+.button-container {
+	margin: 15px 0;
+}
+
+.button-container button {
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px;
+	display: block;
+	font-size: 20px;
+	color: #fdf9f9;
+	border: none;
+	border-radius: 5px;
+	background:purple;
+}
+
+.button-container button:hover {
+	background-color: black;
+	color: wheat;
+}
+
+@media(max-width : 600px) {
+	.container {
+		min-width: 280px;
+	}
+
+	.content {
+		max-height: 280px;
+		overflow: auto;
+	}
+
+	.input-box {
+		margin-bottom: 12px;
+		width: 100%;
+	}
+
+	.input-box:nth-child(2nd) {
+		justify-content: space-between;
+	}
+
+	.gender-category {
+		display: flex;
+		justify-content: space-between;
+		width: 60%;
+	}
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+#drop-area {
+	width: 500px;
+	height: 300px;
+	padding: 30px;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 20px;
+}
+
+#img-view {
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	border: 2px dashed #bbb5ff;
+	background: #f7f8ff;
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+}
+
+#img-view img {
+	width: 100px;
+	margin-top: 25px;
+	object-fit: cover;
+}
+
+#img view span {
+	display: block;
+	font-size: 12px;
+	color: #777;
+	margin-top: 15px;
+	object-fit: cover;
+}

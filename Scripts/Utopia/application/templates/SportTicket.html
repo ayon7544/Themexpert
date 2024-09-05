@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="{% static '/CSS/EntertainmentPage/SportTicket.css' %}">
+
+	<link rel="icon" type="image/x-icon" href="{% static '/favicon/favicon.ico' %}">
+	<title>SportsTicket-Utopia</title>
+</head>
+
+<body>
+	<div class="ticket">
+		<div class="left">
+			<div class="image">
+				<p class="admit-one">
+					<span>Sports</span>
+					<span>Utopia</span>
+					<span>Sports</span>
+				</p>
+				<div class="ticket-number">
+					<p>
+						User ID : {{Ticket.UserID}}
+					</p>
+				</div>
+			</div>
+			<div class="ticket-info">
+				<p class="date">
+					<span>{{DayName}}</span>
+					<span class="june-29">{{DM}}</span>
+					<span>{{Year}}</span>
+				</p>
+				<div class="show-name">
+					<h1>Welcome To<br>{{CityName}}</h1>
+					<p>({{Ticket.SportName}} Match)</p>
+				</div>
+				<p class="location"><span>{{GroundName}}</span>
+					<span class="separator"><i class="far fa-smile"></i></span><span>{{CityName}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="right">
+			<p class="admit-one">
+				<span>{{ Ticket.SportName }}</span>
+				<span>{{ Ticket.SportName }}</span>
+				<span>{{ Ticket.SportName }}</span>
+			</p>
+			<div class="right-info-container">
+				<div class="show-name">
+					<h1>Ticket ID : {{Ticket.id}}</h1>
+				</div>
+				<div class="time">
+					<p>{{Ticket.SportSeatType}}</p>
+					<span class="june-29">{{Ticket.SportTicketPrice}} BDT</span>
+				</div>
+				<div class="barcode">
+					<img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb"
+						alt="QR code">
+				</div>
+				<p class="ticket-number">
+					Seat : {{Ticket.SportSeatNumber}}
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="greet">
+		<P>This one is a popular choice, you're going to have a blast! <br>Have a fantastic time! We hope you make
+			amazing
+			memories.</P>
+	</div>
+</body>
+
+</html>

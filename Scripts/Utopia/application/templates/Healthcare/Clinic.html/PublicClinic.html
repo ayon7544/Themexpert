@@ -1,0 +1,17 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}HEALTHCARE{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static 'CSS/Healthcare/HealthcareMain.css' %}">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Martian+Mono/tester?preview.text=public&preview.text_type=custom" crossorigin="anonymous"> 
+{% endblock %}
+{% block content %} 
+<div class="body">
+    <div class="wrapper">
+        <a href="{% url 'ClinicAppointmentPage' %}" class="box">(BSMMU) Dental Unit</a>
+        <a href="{% url 'ClinicAppointmentPage' %}" class="box">CTG Medical Dental</a>
+        <a href="{% url 'ClinicAppointmentPage' %}" class="box">Rajshahi Medical Dental</a>
+        <a href="{% url 'ClinicAppointmentPage' %}" class="box">Khulna Medical Dental</a>
+    </div>
+</div>
+{% endblock %}

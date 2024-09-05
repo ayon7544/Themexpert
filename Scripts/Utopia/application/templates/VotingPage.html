@@ -1,0 +1,77 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}Election{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/ElectionPage/ElectionPage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="main">
+    {% if UserID is President and Check is False %}
+    <div class="electionsetup">
+        <form action="" method="post">
+            {% csrf_token %}
+            <button type="submit" name="save" value="setup" class="electionsetuppage">Election Setup<i
+                    class="fa-solid fa-people-arrows fa-2xl"></i></button>
+        </form>
+    </div>
+    {% endif %}
+    {% if Check is False %}
+    <div class="electionsetup">
+        <button type="submit" name="save" value="setup" class="electionsetuppage"><i
+                class="fa-solid fa-face-frown fa-shake fa-2xl"></i>No Vote Today!!!!! </button>
+    </div>
+    {% endif %}
+    {% for Election in Elections %}
+    <div class="percentage">
+        <div class="voteshare">Vote Share : </div>
+        <div class="c1">
+            <p>{{Election.Candidate1ID.UserFullName}}</p>
+            <p>{{vc1}}%</p>
+        </div>
+        <div class="voteshare">
+            <p>Constituency</p>
+            <p>{{Election.Constituency}}</p>
+        </div>
+        <div class="c2">
+            <p>{{Election.Candidate2ID.UserFullName}}</p>
+            <p>{{vc2}}%</p>
+        </div>
+    </div>
+    <div class="votetime">
+        <P>{{ error }}</P>
+        <div class="candidate1">
+            <div class="main-images">
+                <img id="white" class="white active" src="{{Election.Candidate1ID.UserImageFilename.url}}" alt="image">
+            </div>
+            <div class="shows-details">
+                <span>Name : {{Election.Candidate1ID.UserFullName}}</span>
+                <span>Gender : {{Election.Candidate1ID.UserGender}}</span>
+                <span>Age : {{Election.Candidate1ID.UserAge}}</span>
+                <span>Mobile No : {{Election.Candidate1ID.UserMobileNum}}</span>
+                <span>Votes : {{Election.Candidate1Vote}}</span>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="save" value="Cd1v">Vote</button>
+                </form>
+            </div>
+        </div>
+        <div class="candidate2">
+            <div class="main-images">
+                <img id="white" class="white active" src="{{Election.Candidate2ID.UserImageFilename.url}}" alt="image">
+            </div>
+            <div class="shows-details">
+                <span>Name : {{Election.Candidate2ID.UserFullName}}</span>
+                <span>Gender : {{Election.Candidate2ID.UserGender}}</span>
+                <span>Age : {{Election.Candidate2ID.UserAge}}</span>
+                <span>Mobile No : {{Election.Candidate2ID.UserMobileNum}}</span>
+                <span>Votes : {{Election.Candidate2Vote}}</span>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="save" value="Cd2v">Vote</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

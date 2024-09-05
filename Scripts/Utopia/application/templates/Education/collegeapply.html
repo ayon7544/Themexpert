@@ -1,0 +1,44 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}College Admission Apply Form{% endblock %}
+{% block more-style %}
+{% endblock %}
+{% block content %}
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold ;
+            margin-bottom: 0px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>College Admission Apply Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ collegeform.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+{% endblock %}

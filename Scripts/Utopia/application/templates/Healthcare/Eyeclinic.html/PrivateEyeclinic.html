@@ -1,0 +1,18 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}HEALTHCARE{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static 'CSS/Healthcare/HealthcareMain.css' %}">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Martian+Mono/tester?preview.text=public&preview.text_type=custom" crossorigin="anonymous"> 
+{% endblock %}
+{% block content %} 
+<div class="body">
+    <div class="wrapper">
+        <a href="{% url 'EyeclinicAppointmentPage' %}" class="box">Bangladesh Eye Hospital</a>
+        <a href="{% url 'EyeclinicAppointmentPage' %}" class="box">Vision Eye Hospital </a>
+        <a href="{% url 'EyeclinicAppointmentPage' %}" class="box">Al-Noor Eye Hospital </a>
+        <a href="{% url 'EyeclinicAppointmentPage' %}" class="box">Islamia Eye Hospital</a>
+        <a href="{% url 'EyeclinicAppointmentPage' %}" class="box">Delta Hospital</a>
+    </div>
+</div>
+{% endblock %}

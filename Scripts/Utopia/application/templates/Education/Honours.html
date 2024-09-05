@@ -1,0 +1,54 @@
+<!-- templates/honours_list_page.html -->
+{% extends "BasePage.html" %}
+{% block title %}Honours List{% endblock %}
+{% block content %}
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: #333; /* Dark color for the heading */
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            background-color: #e6e6fa; /* Light purple background color */
+            width: 80%; /* Adjust the width as needed */
+        }
+
+        th, td {
+            border: 1px solid #666; /* Dark border color */
+            padding: 12px;
+            font-weight: bold; /* Bold text */
+        }
+    </style>
+
+    <h2>Honours List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Public/Private</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for honourss in honours %}
+                <tr>
+                    <td>{{ honourss.name }}</td>
+                    <td>{{ honourss.location }}</td>
+                    <td>
+                        {% if honourss.is_public %}
+                            Public
+                        {% else %}
+                            Private
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

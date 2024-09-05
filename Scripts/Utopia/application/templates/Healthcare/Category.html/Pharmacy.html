@@ -1,0 +1,22 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}HEALTHCARE{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static 'CSS/Healthcare/Health.css' %}">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Martian+Mono/tester?preview.text=public&preview.text_type=custom" crossorigin="anonymous"> 
+{% endblock %}
+{% block content %} 
+<div class="body">
+    <div class="wrapper">
+        <a href="{% url 'PharmacyBookingPage' %}" class="box"> Square Pharmacy</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box"> Incepta Pharmacy</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box">Laz Pharma</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box">AKS Pharma</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box">Labaid Pharmacy</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box">NAz Pharma</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box">Suparna Drugland</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box">Popular Medical Store</a>
+        <a href="{% url 'PharmacyBookingPage' %}" class="box"> A- To -Z Pharma</a>
+    </div>
+</div>
+{% endblock %}

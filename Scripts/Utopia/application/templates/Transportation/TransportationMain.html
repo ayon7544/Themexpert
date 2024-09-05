@@ -1,0 +1,26 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}TRANSPORTATION{% endblock %}
+{% block more-style %}
+
+<link rel="stylesheet" href="{% static 'CSS/Transportation/Bike.css/PublicBike.css' %}">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous"> 
+{% endblock %}
+{% block content %}   
+    <div class="body">
+      <div class="wrapper">
+
+          </a>
+          <a href="{% url 'findbus' %}" class="box">
+            <i class="fa duotone fa-bus" ></i>
+          </a>
+          <a href="{% url 'find_train' %}" class="box">
+            <i class="fa duotone fa-train"></i>
+          </a>
+           <a href="{% url 'find_plane' %}" class="box">
+            <i class="fa duotone fa-plane"></i>
+          </a>
+
+      </div> 
+  </div>     
+{% endblock %}

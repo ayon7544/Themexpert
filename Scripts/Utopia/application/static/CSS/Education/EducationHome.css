@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:ital,wght@1,900&family=Ubuntu&display=swap');
+.main {
+    width: 100%;
+    justify-content: center;
+    align-items: top;
+    margin-bottom: 390px;
+    margin-top: 60px;
+}
+.menul{
+    
+    display: flex;
+    list-style-type: none;
+    margin: 30px;
+    position: left;
+    text-align: 0; 
+    justify-content: space-between;
+   
+}
+.menul li a{
+    color: #778ba5;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    letter-spacing: 2;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+.menul li:hover a{
+    color: #fff;
+    background-color: #1e90ff;
+    transition: 0.5s ease-in-out; 
+}
+
+.contents {
+    display: flex;
+    list-style-type: none;
+    margin: 30px;
+    position: left;
+    text-align: 0;  
+    position: relative;
+}
+
+.contents li{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: top;
+    max-width:390px;
+    height: 200px;
+    font-size: 50px;
+    font-weight: 800;
+    cursor: pointer;
+    width: 100%;
+    margin: 50px;
+    border-radius: 18px;
+    z-index: 3;
+    overflow: hidden;
+    padding: 30px;
+    box-shadow: -28px 27px 37.5px rgba(0, 0, 0, 0.53),
+        10px -19px 37.5px rgb(255 255 255),
+        inset 4px -4px 8px rgb(0, 0, 0, 0.53);
+    inset: -5px 5px 12px #fff;
+    text-decoration: none;
+}
+.contents li a{
+    color: #2a025d;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    letter-spacing: 2;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+
+.contents :hover a{
+    color: #fff;
+    background-color: #2a025d;
+    transition: 0.5s ease-in-out;
+    
+}
+.Form {
+    position: absolute;
+    top: 82%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0624a6;
+    padding: 30px 60px;
+    font-size: 30px;
+    Letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 20px 50px rgba(100, 98, 98, 0.5);
+}
+Form:before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.05);
+}
+.Form span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #ffffff, #1809ed);
+    animation: animate1 1s alternate infinite;
+}
+@keyframes animate1 
+{
+  0% 
+  {
+    transform: translateX(-100%);
+  }
+  100% 
+  {
+    transform: translateX(100%);
+  }
+}
+
+.Form span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff, #1809ed);
+    animation: animate2 1s alternate infinite;
+}
+@keyframes animate2 
+{
+  0% 
+  {
+    transform: translateY(-100%);
+  }
+  100% 
+  {
+    transform: translateY(100%);
+  }
+}
+.Form span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #ffffff, #1809ed);
+    animation: animate3 1s alternate infinite;
+}
+@keyframes animate3 
+{
+  0% 
+  {
+    transform: translateX(100%);
+  }
+  100% 
+  {
+    transform: translateX(-100%);
+  }
+}
+.Form span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, #ffffff, #1809ed);
+    animation: animate4 1s alternate infinite;
+}
+@keyframes animate4 
+{
+  0% 
+  {
+    transform: translateY(100%);
+  }
+  100% 
+  {
+    transform: translateY(-100%);
+  }
+}
+
+.Notice {
+    display: flex;
+    list-style-type: none;
+    margin: 290px;
+    position: center;
+    text-align: center;  
+    position: relative;
+} 
+
+.Notice table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.Notice table, th, td {
+    border: 6px solid rgb(0, 27, 65);
+    padding: 9px;
+    
+}
+  

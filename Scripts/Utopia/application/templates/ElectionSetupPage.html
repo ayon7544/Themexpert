@@ -1,0 +1,37 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}ElectionSetup{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/ElectionPage/ElectionSetupPage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+     <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Enter The Constituency Name</p>
+        <input type="text" list="ConstituencyList" name="Constituency" value="" placeholder="Search Constituency...." class="form-control" style="width:300px;" required>
+        <datalist id="ConstituencyList">
+        {% for Constituency in ConstituencyList %}
+            <option value="{{ Constituency.ConstituencyName }}">
+        {% endfor %}
+        </datalist>
+        <p>Enter The ID of Politician Num 1</p>
+        <input type="text" list="PoliticiansList" name="Candidate1" value="" placeholder="Search Politician...." class="form-control" style="width:300px;" required>
+        <datalist id="PoliticiansList">
+        {% for Politician in PoliticiansList %}
+            <option value="{{Politician.Pid }}">{{ Politician.PoliticianName }}
+        {% endfor %}
+        </datalist>
+        <p>Enter The ID of Politician Num 2</p>
+        <input type="text" list="PoliticiansList" name="Candidate2" value="" placeholder="Search Politician...." class="form-control" style="width:300px;" required>
+        <datalist id="PoliticiansList">
+        {% for Politician in PoliticiansList %}
+            <option value="{{Politician.Pid }}">{{ Politician.PoliticianName }}
+        {% endfor %}
+        </datalist>
+        <div class="button-container">
+            <button type="submit" name="save" value="confirm">Save</button>
+        </div>
+     </form>
+</div>
+{% endblock %}

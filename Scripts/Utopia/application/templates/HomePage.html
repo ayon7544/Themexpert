@@ -1,0 +1,49 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/HomePage/HomePage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="main">
+    <div class="profile">
+        <div class="user">
+            <div class="main-images">
+                <img id="white" class="white active" src="{{user.UserImageFilename.url}}" alt="image">
+            </div>
+            <div class="shows-details">
+                <span>Name : {{user.UserFullName}}</span>
+                <span>Gender : {{user.UserGender}}</span>
+                <span>Occupation : {{user.UserOccupation}}</span>
+                <span>Role : {{user.UserRole}}</span>
+                <span>Date Of Birth : {{user.UserDateOfBirth}}</span>
+                <span>Balance : BDT {{user.UserPoints}} TK</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="contents">
+            <a href="{% url 'VotingPage' %}" class="Voting">Election<i class="fa-solid fa-check-to-slot fa-2xl"></i></a>
+            <a href="{% url 'MinistryPage' %}" class="Ministry">Government<i
+                    class="fa-solid fa-landmark-dome fa-2xl"></i></a>
+            <a href="{% url 'TransportationMain' %}" class="Transportation">Transportation<i
+                    class="fa-solid fa-bicycle fa-2xl"></i></a>
+        </div>
+        <div class="contents">
+            <a href="{% url 'HealthcareMain' %}" class="Healthcare">Healthcare<i
+                    class="fa-solid fa-briefcase-medical fa-2xl"></i></a>
+            <a href="{% url 'EducationPage' %}" class="Education">Education<i
+                    class="fa-solid fa-book-open-reader fa-2xl"></i></a>
+            <a href="{% url 'EntertainmentPage' %}" class="Entertainment">Entertainment<i
+                    class="fa-solid fa-gamepad fa-2xl"></i></a>
+        </div>
+        <div class="contents">
+            <a href="{% url 'Am_I_A_CitizenPage' %}" class="Am-I-A-Citizen">Are U Citizen?<i
+                    class="fa-solid fa-person-circle-question fa-2xl"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+<div>
+</div>
+{% endblock %}

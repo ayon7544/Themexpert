@@ -1,0 +1,19 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}TRANSPORTATION{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static 'CSS/Healthcare/HealthcareMain.css' %}">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Martian+Mono/tester?preview.text=public&preview.text_type=custom" crossorigin="anonymous"> 
+{% endblock %}
+{% block content %} 
+<div class="body">
+    <div class="wrapper">
+        <a href="{% url 'HospitalAppointmentPage' %}" class="box">Square Hospital</a>
+        <a href="{% url 'HospitalAppointmentPage' %}" class="box">Labaid Hospital</a>
+        <a href="{% url 'HospitalAppointmentPage' %}" class="box">Asgar Ali Hospital</a>
+        <a href="{% url 'HospitalAppointmentPage' %}" class="box">Ibn Sina</a>
+        <a href="{% url 'HospitalAppointmentPage' %}" class="box">United Hospital</a>
+        <a href="{% url 'HospitalAppointmentPage' %}" class="box">Birdem Hospital</a>
+    </div>
+</div>
+{% endblock %}

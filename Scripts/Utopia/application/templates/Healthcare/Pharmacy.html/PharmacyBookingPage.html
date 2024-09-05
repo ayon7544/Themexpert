@@ -1,0 +1,48 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}HEALTHCARE{% endblock %}
+{% block more-style %}
+    <link rel="stylesheet" href="static/CSS/Healthcare/Appoint.css">
+{% endblock %}
+{% block content %} 
+<div class="body">
+      <section class="appointment-form">
+        <h2>Book An Appointment</h2>
+        <form action="book_pharmacyappointment" method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="medicine">Select Medicine:</label>
+            <select id="medicine" name="medicine">
+                <option value="Abilify">Abilify</option>
+                <option value="Abiraterone">Abiraterone</option>
+                <option value="Advil">Advil</option>
+                <option value="Aciclovir">Aciclovir</option>
+                <option value="Amitriptyline">Amitriptyline</option>
+                <option value="Ampicillin ">Ampicillin </option>
+                <option value="Anti-D immunoglobulin">Anti-D immunoglobulin</option>
+                <option value="Barium Sulfate">Barium Sulfate</option>
+                <option value="Benzyl benzoate ">Benzyl benzoate </option>
+                <option value="Calcium gluconate">Calcium gluconate</option>
+                <option value="Chlorambucil">Chlorambucil</option>
+                <option value="Dapsone">Dapsone</option>
+                <option value="Vitamin B-Complex">Vitamin B-Complex</option>
+                <option value="Etanus vaccine Injection">Etanus vaccine Injection</option>
+                <option value="Spironolactone">Spironolactone</option>
+                <option value="Napa">Napa</option>
+                <option value="Ace XR">Ace XR</option>
+                <option value="Nexum">Nexum</option>
+
+            </select><br>
+            <input type="submit" value="Book">
+        </form>
+      </section>
+</div>
+{% endblock %}

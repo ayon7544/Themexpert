@@ -1,0 +1,15 @@
+.floatmessage {
+    display: flex;
+    position: absolute;
+    height: 80px;
+    width: 500px;
+    z-index: 1;
+    margin: 9.375rem;
+    justify-content: center;
+    overflow: auto;
+}
+
+.parent-div{
+    display: hidden;
+}
+  

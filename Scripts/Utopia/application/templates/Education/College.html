@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College List</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: #333; /* Dark color for the heading */
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            background-color: #e6e6fa; /* Light purple background color */
+            width: 80%; /* Adjust the width as needed */
+        }
+
+        th, td {
+            border: 1px solid #666; /* Dark border color */
+            padding: 12px;
+            font-weight: bold; /* Bold text */
+        }
+    </style>
+</head>
+<body>
+    <h2>College List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Public/Private</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for college in colleges %}
+                <tr>
+                    <td>{{ college.name }}</td>
+                    <td>{{ college.location }}</td>
+                    <td>
+                        {% if college.is_public %}
+                            Public
+                        {% else %}
+                            Private
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

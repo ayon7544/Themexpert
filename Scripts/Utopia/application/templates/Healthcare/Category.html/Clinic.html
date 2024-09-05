@@ -1,0 +1,15 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}TRANSPORTATION{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static 'CSS/Healthcare/HealthcareMain.css' %}">
+
+{% endblock %}
+{% block content %} 
+<div class="body">
+    <div class="wrapper">
+        <a href="{% url 'PrivateClinic' %}" class="box">Private</a>
+        <a href="{% url 'PublicClinic' %}" class="box">Public</a>
+    </div>
+</div>
+{% endblock %}

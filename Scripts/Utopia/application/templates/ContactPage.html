@@ -1,0 +1,35 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/ContactPage/ContactPage.css' %}">
+<link rel="stylesheet" href="{% static '/CSS/HomePage/HomePage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="contact">
+    <div class="one">
+        <div class="main-images">
+            <img id="white" class="white active" src="{% static '/MEDIA/IMAGE/avatar.jpg' %}" alt="image">
+        </div>
+        <span>Ayon Ghosh</span><br>
+        <span>21101032@uap-bd.edu</span><br>
+        <span>Backend Developer</span><br>
+    </div>
+    <div class="two">
+        <div class="main-images">
+            <img id="white" class="white active" src="{% static '/MEDIA/IMAGE/avatar.jpg' %}" alt="image">
+        </div>
+        <span>Raita Sikdar Fariha</span><br>
+        <span>21101023@uap-bd.edu</span><br>
+        <span>Frontend Developer</span><br>
+    </div>
+    <div class="three">
+        <div class="main-images">
+            <img id="white" class="white active" src="{% static '/MEDIA/IMAGE/avatar.jpg' %}" alt="image">
+        </div>
+        <span>Mostasim Leon</span><br>
+        <span>21101017@uap-bd.edu</span><br>
+        <span>Designer</span><br>
+    </div>
+</div>
+{% endblock %}

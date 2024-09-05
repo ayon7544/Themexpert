@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:ital,wght@1,900&family=Ubuntu&display=swap');
+
+.container {
+    width: fit-content;
+	padding:50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+	display: block;
+	justify-content: center;
+	overflow: hidden;
+	align-items: center;
+    text-align: center;
+	border-radius: 40px;
+	border: 1px solid #f7f7f7;
+	box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+.container select{
+	margin: 70px;
+	display: flex;
+	width: fit-content;
+	height: 40px;
+}
+
+
+.button-container button {
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px;
+	display: block;
+	font-size: 20px;
+	color: #fdf9f9;
+	border: none;
+	border-radius: 5px;
+	background:purple;
+}
+
+.button-container button:hover {
+	background-color: black;
+	color: wheat;
+}

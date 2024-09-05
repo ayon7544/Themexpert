@@ -1,0 +1,17 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}EDUCATION{% endblock %}
+{% block more-style %}
+
+<link rel="stylesheet" href="{% static 'CSS/Education/EducationHome.css' %}">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous">
+{% endblock %}
+{% block content %}
+    <div class="body">
+        <div class="contents">
+          <li><a href="{% url 'collegeapply' %}" class="College">College</a></li>
+          <li><a href="{% url 'honoursapply' %}" class="Honours">Honours</a></li>
+          <li><a href="{% url 'mastersapply' %}" class="Masters">Masters</a></li>
+        </div>
+  </div>
+{% endblock %}

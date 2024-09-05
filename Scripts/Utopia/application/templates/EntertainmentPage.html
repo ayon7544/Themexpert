@@ -1,0 +1,384 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}Entertainment{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/EntertainmentPage/EntertainmentPage.css' %}">
+<link rel="stylesheet" href="{% static '/CSS/RegistrationFormPage/RegistrationFormPage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="main">
+
+
+    <!-- Sports Section  -->
+
+
+    <div class="contents">
+        <a class="Sports" onclick="openPopupSports()">Sports<i class="fa-solid fa-trophy fa-2xl"></i></a>
+        <div class="container popup" id="PopupSports">
+            <form action="" method="POST" id="indexForm" data-Venue-url="{% url 'ajax_load_Venues' %}"
+                data-Date-url="{% url 'ajax_load_Date' %}" data-Seat-url="{% url 'ajax_load_Seat' %}"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="content">
+                    <a onclick="closePopupSports()">
+                        <span class="material-icons">
+                            cancel
+                        </span>
+                    </a>
+
+                    <div class="input-box">
+                        <div class="content"> <label for="Sport">Select Sports</label></div>
+                        <select name="Sport" id="Sport">
+                            <option selected>
+                                -------------------------------------------------------------</option>
+                            {% for i in Sport %}
+                            <option value="{{i.id}}">
+                                {{i.name}}
+                            </option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <div class="content"> <label for="SportVenue">Select Venue</label></div>
+
+                        <select name="SportVenue" id="SportVenue">
+                            <option selected>
+                                -------------------------------------------------------------</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <div class="content"><label for="SportDate">Select Date</label></div>
+                        <select name="SportDate" id="SportDate">
+                            <option selected>
+                                -------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-box">
+                        <div class="content"><label for="SportSeatType">Select Seat Type</label></div>
+                        <select name="SportSeatType" id="SportSeatType">
+                            <option selected>
+                                -------------------------------------------------------------</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit" name="save" value="confirm">Buy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Arts Section -->
+
+    <div class="contents">
+        <a class="Arts" onclick="openPopupArts()">Arts<i class="fa-solid fa-masks-theater fa-2xl"></i></a>
+        <div class="container popup" id="PopupArts">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="content">
+                    <a onclick="closePopupArts()">
+                        <span class="material-icons">
+                            cancel
+                        </span>
+                    </a>
+
+                    <div class="input-box">
+                        <label for="Art">Select Art</label>
+                        <select name="" id="Art">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Vanue">Select Vanue</label>
+                        <select name="" id="ArtVanue">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="ArtDate">Select Date</label>
+                        <select name="" id="ArtDate">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="ArtSeatType">Select Seat Type</label>
+                        <select name="" id="ArtSeatType">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="button-container">
+                    <button type="submit" name="save" value="confirm">Buy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Movies Section -->
+
+
+
+    <div class="contents">
+        <a class="Movies" onclick="openPopupMovies()">Movies<i class="fa-solid fa-film fa-2xl"></i></a>
+        <div class="container popup" id="PopupMovies">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="content">
+                    <a onclick="closePopupMovies()">
+                        <span class="material-icons">
+                            cancel
+                        </span>
+                    </a>
+                    <div class="input-box">
+                        <label for="Theatre">Select Theatre</label>
+                        <select name="" id="">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="Date">Select Date</label>
+                        <select name="" id="">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="Movie">Select Movie</label>
+                        <select name="" id="">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="input-box">
+                        <label for="Hall">Select Hall</label>
+                        <select name="" id="">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="ShowTime">Select ShowTime</label>
+                        <select name="" id="">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="SeatType">Select Seat Type</label>
+                        <select name="" id="">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="button-container">
+                    <button type="submit" name="save" value="confirm">Buy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Parks Section  -->
+
+
+
+
+    <div class="contents">
+        <a class="Parks" onclick="openPopupParks()">Parks<i class="fa-solid fa-p fa-2xl"></i></a>
+        <div class="container popup" id="PopupParks">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="content">
+                    <a onclick="closePopupParks()">
+                        <span class="material-icons">
+                            cancel
+                        </span>
+                    </a>
+
+                    <div class="input-box">
+                        <label for="ParkType">Select Park Type</label>
+                        <select name="ParkType" id="ParkType">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Park">Select Park</label>
+                        <select name="Park" id="Park">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="ParkDate">Select Date</label>
+                        <select name="ParkDate" id="ParkDate">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="ParkTime">Select Time</label>
+                        <select name="ParkTime" id="ParkTime">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="button-container">
+                    <button type="submit" name="save" value="confirm">Buy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Museum Section  -->
+
+
+
+    <div class="contents">
+        <a class="Museum" onclick="openPopupMuseum()">Museum<i class="fa-solid fa-m fa-2xl"></i></a>
+        <div class="container popup" id="PopupMuseum">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="content">
+                    <a onclick="closePopupMuseum()">
+                        <span class="material-icons">
+                            cancel
+                        </span>
+                    </a>
+
+                    <div class="input-box">
+                        <label for="MuseumType">Select Museum Type</label>
+                        <select name="MuseumType" id="MuseumType">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Museum">Select Museum</label>
+                        <select name="Museum" id="Museum">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="MuseumDate">Select Date</label>
+                        <select name="MuseumDate" id="MuseumDate">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="MuseumTime">Select Time</label>
+                        <select name="MuseumTime" id="MuseumTime">
+                            <option selected>
+                                -------------------------------------------------------------------------------</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="button-container">
+                    <button type="submit" name="save" value="confirm">Buy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="{% static '/JAVASCRIPT/EntertainmentPage/popup.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $("#Sport").change(function () {
+            var url = $("#indexForm").attr("data-Venue-url");
+            var SportId = $(this).val();
+            var selectedVenue = $("#SportVenue").val();
+
+            $.ajax({
+                url: url,
+                data: {
+                    "Sport": SportId,
+                    "Venue": selectedVenue,
+                },
+                success: function (data) {
+                    $("#SportVenue").html(data);
+                }
+            });
+        });
+
+        $("#SportVenue").change(function () {
+            var url = $("#indexForm").attr("data-Date-url");
+            var selectedSportVenue = $(this).val();  // Corrected variable name
+            var selectedDate = $("#SportDate").val();
+
+            $.ajax({
+                url: url,
+                data: {
+                    "SportVenue": selectedSportVenue,  // Corrected parameter name
+                    "Date": selectedDate,
+                },
+                success: function (data) {
+                    $("#SportDate").html(data);
+                }
+            });
+        });
+
+        $("#SportDate").change(function () {
+            var url = $("#indexForm").attr("data-Seat-url");
+            var selectedSportDate = $(this).val();  // Corrected variable name
+            var selectedSeat = $("#SportSeatType").val();
+
+            $.ajax({
+                url: url,
+                data: {
+                    "SportDate": selectedSportDate,  // Corrected parameter name
+                    "Seat": selectedSeat,
+                },
+                success: function (data) {
+                    $("#SportSeatType").html(data);
+                }
+            });
+        });
+    </script>
+
+
+    {% endblock %}

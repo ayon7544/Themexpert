@@ -1,0 +1,67 @@
+.body{
+  
+    display: flex;
+    justify-content:center;
+    height: 100vh;
+    background-color: #c3ccee;
+    align-content: center;
+    width: 100%;
+    margin-bottom:none;
+}
+
+.wrapper{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 90px;
+    flex-direction: column;
+    width: 90%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+
+.appointment-form, .hospital-facilities {
+    width: 60%;
+    margin: 0 auto;
+    padding: 60px;
+    justify-content:center;
+}
+
+.appointment-form h2, .hospital-facilities h2 {
+    font-size: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    color:rgb(35, 0, 67);
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 2px solid #ecd3f9;
+    border-radius: 4px;
+    
+}
+
+input[type="submit"] {
+    background-color: rgb(35, 0, 67);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #5e5d5d
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}

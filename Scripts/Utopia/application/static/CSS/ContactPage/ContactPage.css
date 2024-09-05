@@ -1,0 +1,33 @@
+.contact{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: fit-content;
+    padding: 30px;
+}
+
+.one,
+.two,
+.three{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width:fit-content;
+    max-height: 500px;
+    font-size: 30px;
+    font-weight: 800;
+    word-wrap: break-word;
+    cursor: pointer;
+    width: 100%;
+    margin: 30px;
+    border-radius: 18px;
+    z-index: 3;
+    overflow: hidden;
+    padding: 30px;
+    box-shadow: -28px 27px 37.5px rgba(0, 0, 0, 0.53),
+        10px -19px 37.5px rgb(255 255 255),
+        inset 4px -4px 8px rgb(0, 0, 0, 0.53);
+    inset: -5px 5px 12px #fff;
+    text-decoration: none;
+}

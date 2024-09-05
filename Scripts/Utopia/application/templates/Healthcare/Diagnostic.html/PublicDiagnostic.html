@@ -1,0 +1,17 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}HEALTHCARE{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static 'CSS/Healthcare/HealthcareMain.css' %}">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Martian+Mono/tester?preview.text=public&preview.text_type=custom" crossorigin="anonymous"> 
+{% endblock %}
+{% block content %} 
+<div class="body">
+    <div class="wrapper">
+        <a href="{% url 'DiagnosticAppointmentPage' %}" class="box">Dhaka Medical </a>
+        <a href="{% url 'DiagnosticAppointmentPage' %}" class="box">BSMMU</a>
+        <a href="{% url 'DiagnosticAppointmentPage' %}" class="box">Chittagong Medical</a>
+        <a href="{% url 'DiagnosticAppointmentPage' %}" class="box">Rajshahi Medical</a>
+    </div>
+</div>
+{% endblock %}

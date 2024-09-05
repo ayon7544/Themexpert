@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:ital,wght@1,900&family=Ubuntu&display=swap');
+
+span#blur.active {
+    filter: blur(20px);
+}
+
+#popup {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 200px;
+    padding: 50px;
+    padding-bottom: 0px;
+    background: #fff;
+    opacity: 0;
+    transition: 0.5s;
+    word-wrap: break-word;
+    overflow: scroll;
+    background-image: white;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #080f09;
+    border-bottom-width: medium;
+}
+
+#popup.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Montserrat:ital,wght@1,900&family=Ubuntu&display=swap');
+
+.main {
+    width: 100%;
+    justify-content: center;
+    align-items: top;
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
+
+.profile {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+img {
+    display: inline;
+}
+
+output {
+    display: inline;
+}
+
+.user {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: auto;
+    width: auto;
+    border-radius: 18px;
+    z-index: 3;
+    overflow: hidden;
+    padding: 20px 30px 30px 30px;
+    box-shadow: -28px 27px 37.5px rgba(0, 0, 0, 0.53),
+        10px -19px 37.5px rgb(255 255 255),
+        inset 4px -4px 8px rgb(0, 0, 0, 0.53);
+    inset: -5px 5px 12px #fff;
+}
+
+.user div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 9px;
+    color: #404040;
+    justify-content: center;
+}
+.contents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.Voting,
+.Ministry,
+.Transportation,
+.Healthcare,
+.Education,
+.Entertainment,
+.Am-I-A-Citizen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: top;
+    max-width:390px;
+    height: 200px;
+    font-size: 30px;
+    font-weight: 800;
+    cursor: pointer;
+    color: purple;
+    width: 100%;
+    margin: 30px;
+    border-radius: 18px;
+    z-index: 3;
+    overflow: hidden;
+    padding: 30px;
+    box-shadow: -28px 27px 37.5px rgba(0, 0, 0, 0.53),
+        10px -19px 37.5px rgb(255 255 255),
+        inset 4px -4px 8px rgb(0, 0, 0, 0.53);
+    inset: -5px 5px 12px #fff;
+    text-decoration: none;
+}
+
+.contents a:hover{
+    color: #fff;
+    background-color: #414a4c;
+    transition: 0.3s ease-in-out;
+}
+
+/* .profile{
+    position: relative;
+    max-width: 399px;
+    width: 100%;
+    border-radius: 18px;
+
+} */
+
+img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f7f7f7;
+    z-index: 1;
+    box-shadow:  -7px -7px 17px #fff, 7px 7px 17px rgba(7, 70, 70, 0.15);
+}
+/* .user{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+} */

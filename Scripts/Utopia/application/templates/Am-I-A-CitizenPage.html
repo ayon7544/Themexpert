@@ -1,0 +1,41 @@
+{% extends 'BasePage.html' %}
+{% load static %}
+{% block title %}
+Am I A Citizen
+{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/Am-I-A-CitizenPage/Am-I-A-CitizenPage.css' %}" />
+{% endblock %}
+{% block content %}
+<div class="news">
+  <p>Tranding :</p>
+  <marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()" scrollamount="15">
+    <form action="" method="post">
+      {% csrf_token %}
+      {% for news in NEWS %}
+      <button type="submit" name="save" value="{{ news.url }}">{{ news.title }} &nbsp; || &nbsp;</button>
+      {% endfor %}
+    </form>
+  </marquee>
+</div>
+<div class="firstdiv">
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="frem">
+      <p class="words">Share your thoughts with the country</p>
+      <input class="text-area" placeholder="Write here" type="text" name="Opinions" id="my-input" />
+      <div class="bottom-cont">
+        <button type="submit" name="save" value="confirm"><a href=""><i
+              class="fa-regular fa-paper-plane fa-2xl"></i></a></button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="message"> 
+  {% for one in PublicOpinion %}
+  <div class="show">
+    <p>{{ one }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

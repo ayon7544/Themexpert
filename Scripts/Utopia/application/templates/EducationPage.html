@@ -1,0 +1,27 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}EDUCATION{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static 'CSS/Education/EducationHome.css' %}">
+<link rel="stylesheet" href="{% static 'JAVASCRIPT/Education.js/EducationHome.js' %}">
+{% endblock %}
+{% block content %}
+<div class="main">
+        <div class="contents">
+          <li><a href="{% url 'College' %}" class="College">College</a></li>
+          <li><a href="{% url 'Honours' %}" class="Honours">Honours</a></li>
+          <li><a href="{% url 'Masters' %}" class="Masters">Masters</a></li>
+        </div>
+      
+        <div class="button">
+          <a href="{% url 'Form' %}" class="Form">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Apply Now
+          </a>
+        </div>
+</div>
+{% endblock %}
+  

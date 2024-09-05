@@ -1,0 +1,39 @@
+{% extends "BasePage.html" %}
+{% load static %}
+{% block title %}MinistrySetup{% endblock %}
+{% block more-style %}
+<link rel="stylesheet" href="{% static '/CSS/MinistryPage/MinistrySetupPage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Select Ministry Name</p>
+        <select type="text" list="MinistryList" name="Ministry" value="" class="custom-select" style="width:300px;"
+            required>
+            <datalist id="MinistryList">
+                {% if MinistryList|length > 0 %}
+                <option value="" disabled selected>-----</option>
+                {% endif %}
+                {% for Ministry in MinistryList %}
+                <option value="{{Ministry.MinistryName}}">{{ Ministry.MinistryName }}</option>
+                {% endfor %}
+            </datalist>
+        </select>
+        <p>Select MP</p>
+        <select type="text" list="MpList" name="MP" value="" class="custom-select" style="width:300px;" required>
+            <datalist id="MpList">
+                {% if MpList|length > 0 %}
+                <option value="" disabled selected>-----</option>
+                {% endif %}
+                {% for MP in MpList %}
+                <option value="{{MP.PoliticianName}} {{MP.PoliticianID}}">{{ MP.PoliticianName }}</option>
+                {% endfor %}
+            </datalist>
+        </select>
+        <div class="button-container">
+            <button type="submit" name="save" value="confirm">Save</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
